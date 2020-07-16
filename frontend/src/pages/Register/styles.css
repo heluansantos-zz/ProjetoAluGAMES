@@ -1,7 +1,7 @@
 .register-container {
   width: 100%;
   max-width: 1120px;
-  height: 100vh;
+  min-height: 600px;
   margin: 0 auto;
 
   display: flex;
@@ -11,8 +11,10 @@
 
 .register-container .content {
   width: 100%;
-  padding: 96px;
-  background: #f0f0f5;
+  height: 450px;
+  margin-top: 0px;
+  background: #FFFFFF;
+  border-radius: 30px;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
 
   display: flex;
@@ -23,8 +25,13 @@
 .register-container .content section {
   width: 100%;
   max-width: 380px;
+  height: 450px;
+  padding-left: 20px;
 }
-
+.register-container .content section img{
+  height: 55px;
+  width: 356.078px;
+}
 .register-container .content section h1 {
   margin: 64px 0 32px;
   font-size: 32px;
@@ -35,14 +42,32 @@
   color: #737380;
   line-height: 32px;
 }
-
+.back-link{
+  margin-top: 180px;
+}
 .register-container .content form {
-  width: 100%;
-  max-width: 450px;
+  background: #f3f3f3;
+  width: 400px;
+  max-width: 600px;
+  border-radius: 30px;
+  min-height: 450px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  box-shadow: 3px 3px 10px rgb(173, 173, 173);
+  text-align: center;
+  align-items: center;
 }
 
 .register-container .content form input {
-  margin-top: 8px;
+  border-radius: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ffacac;
+  width: 67%;
+  margin-left: 10px;
+  font-size: 15px;
+  color: gray;
+  transition: 0.2s;
 }
 
 .register-container .content .input-group {
@@ -51,4 +76,15 @@
 
 .register-container .content .input-group input + input {
   margin-left: 8px;
+}
+.register-container .content form button{
+  width: 90%;
+  color: white;
+  font-weight: bold;
+  margin-top: 50px;
+  background: linear-gradient(to right, #c51d98, #ffacac);
+  border: none;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  transition: 0.3s;
 }

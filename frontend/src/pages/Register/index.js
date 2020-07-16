@@ -6,7 +6,7 @@ import "./styles.css";
 
 import api from "../../services/api";
 
-import logoImg from "../../assets/logo.svg";
+import logoUm from "../../assets/logo-um.png";
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -44,22 +44,21 @@ export default function Register() {
     <div className="register-container">
       <div className="content">
         <section>
-          <img src={logoImg} alt="Be The Hero" />
+          <img src={logoUm} alt="AluGAMES" />
           <h1>Cadastro</h1>
           <p>
-            Faça seu cadastro, entre na plataforma e ajude pessoas a encontrar
-            os casos da sua ONG
+            texto
           </p>
 
           <Link to="/" className="back-link">
             <FiArrowLeft size={16} color="#e02041" />
-            Não tenho cadastro
+            <p>voltar</p> 
           </Link>
         </section>
 
         <form onSubmit={handleRegister}>
           <input
-            placeholder="Nome da ONG"
+            placeholder="Nome"
             value={name}
             onChange={e => setName(e.target.value)}
           />
@@ -89,7 +88,7 @@ export default function Register() {
           </div>
 
           <button className="button" type="submit">
-            Cadastrar
+            <p>Cadastrar</p>
           </button>
         </form>
       </div>

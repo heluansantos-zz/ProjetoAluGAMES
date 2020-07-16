@@ -23,3 +23,8 @@
   font-size: 32px;
   margin-bottom: 32px;
 }
+
+.fundo{
+  border: 1px solid;
+  height: 700px;
+}

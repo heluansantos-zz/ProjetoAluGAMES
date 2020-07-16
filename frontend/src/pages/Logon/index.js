@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";
 
-import heroesImg from "../../assets/heroes.png";
+import heroesImg from "../../assets/Grupo 33.png";
 import logoImg from "../../assets/logo.svg";
 import api from "../../services/api";
 
@@ -42,7 +42,7 @@ export default function Logon() {
             onChange={e => setId(e.target.value)}
           />
           <button className="button" type="submit">
-            Entrar
+            Entrar aqui
           </button>
           <Link to="/register" className="back-link">
             <FiLogIn size={16} color="#e02041" />
@@ -50,7 +50,7 @@ export default function Logon() {
           </Link>
         </form>
       </section>
-      <img src={heroesImg} alt="Heroes" />
+      <img src={heroesImg} alt="Heroes" className="fundo"/>
     </div>
   );
 }

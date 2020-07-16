@@ -49,6 +49,10 @@ export default function Profile() {
         <Link to="/incidents/new" className="register">
           Cadastrar novo jogo
         </Link>
+
+        <button type="button" onClick={handleLogout}>
+          <FiPower size={18} color="#e02041" />
+        </button>
       </header>
       <div className="scroll-horizontal">
         <button className="back" >

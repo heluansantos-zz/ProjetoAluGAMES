@@ -1,90 +1,131 @@
+
 .register-container {
   width: 100%;
   max-width: 1120px;
   min-height: 600px;
   margin: 0 auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.register-container .content {
-  width: 100%;
-  height: 450px;
-  margin-top: 0px;
-  background: #FFFFFF;
-  border-radius: 30px;
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
-
-  display: flex;
-  justify-content: space-between;
   align-items: center;
 }
-
-.register-container .content section {
-  width: 100%;
-  max-width: 380px;
-  height: 450px;
-  padding-left: 20px;
+.flex {
+  display: flex; /*fica um ao lado do outro*/
+  justify-content: space-between; /*Irá dar espaço entre os itens*/
+  flex-wrap: wrap;
+  align-items: center;
+  height: 52px;
+  margin: 0 100px;
+  padding-top: 23px;
+  padding-bottom: 50px;
 }
-.register-container .content section img{
+
+.flex img{
   height: 55px;
-  width: 356.078px;
 }
-.register-container .content section h1 {
-  margin: 64px 0 32px;
-  font-size: 32px;
+.botao-ajuda {
+  color: #ffacac;
+  font-weight: bold;
+  border: 3px solid #c51d98;
+  padding: 5px 20px;
+  background: none;
+  border-radius: 20px;
+  transition: 0.2s;
 }
 
-.register-container .content section p {
-  font-size: 18px;
-  color: #737380;
-  line-height: 32px;
+.botao-ajuda:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 10px #ffacac;
 }
-.back-link{
-  margin-top: 180px;
-}
-.register-container .content form {
+.register-container form {
   background: #f3f3f3;
-  width: 400px;
+  width: 470px;
   max-width: 600px;
-  border-radius: 30px;
-  min-height: 450px;
-  margin-top: 100px;
+  min-height: 515px;
+  margin: 5px 0 0 330px;
+  border-radius: 15px;
   margin-bottom: 100px;
-  box-shadow: 3px 3px 10px rgb(173, 173, 173);
+  box-shadow: 4px 3px 10px rgb(173, 173, 173);
   text-align: center;
   align-items: center;
 }
+.logo-center{
+  padding: 34px 0 0 10px;
+  height: 100px;
+}
+.logo-center img{
+  height: 25px;
+}
 
-.register-container .content form input {
+.input-top input{
   border-radius: none;
   background: transparent;
   border: none;
   border-bottom: 1px solid #ffacac;
   width: 67%;
-  margin-left: 10px;
+  margin: 13px;
   font-size: 15px;
   color: gray;
   transition: 0.2s;
 }
 
-.register-container .content .input-group {
+.register-container .input-group {
   display: flex;
 }
-
-.register-container .content .input-group input + input {
-  margin-left: 8px;
+.input-left{
+  border-radius: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ffacac;
+  width: 200px;
+  margin: 13px 13px 0px 77px;
+  font-size: 15px;
+  color: gray;
+  transition: 0.2s;
 }
-.register-container .content form button{
-  width: 90%;
+.input-right{
+  border-radius: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ffacac;
+  width: 12px;
+  margin: 13px 0px 0px 25px;
+  font-size: 15px;
+  color: gray;
+  transition: 0.2s;
+}
+.contract{
+  display: flex;
+  margin: 25px 0 0 70px;
+}
+.contract input{
+  margin: 0 0 5px 0;
+}
+.contract p{
+  color: rgb(44, 44, 44);
+  margin: 0px 5px 0 30px;
+}
+.contract link{
+  color: #c51d98;
+}
+.register-container form button{
+  display: flex;
+  align-items: center;
+  width: 70%;
+  height: 55px;
   color: white;
   font-weight: bold;
-  margin-top: 50px;
+  margin: 50px 0 0 70px;
   background: linear-gradient(to right, #c51d98, #ffacac);
   border: none;
-  border-radius: 30px;
+  border-radius: 8px;
   margin-bottom: 30px;
   transition: 0.3s;
+}
+.register-container form button strong{
+  margin: 0 110px 0 30px;
+}
+.register-container form button img{
+  filter: invert(100%);
+}
+.aviso{
+  color: rgb(44, 44, 44);
+  font-size: 12px;
 }

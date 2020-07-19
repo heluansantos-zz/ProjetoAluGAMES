@@ -7,7 +7,7 @@ import "./styles.css";
 import api from "../../services/api";
 
 import logoUm from "../../assets/logo-um.png";
-
+import logoCenter from "../../assets/logo-center.png"
 export default function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -41,64 +41,62 @@ export default function Register() {
   }
 
   return (
+    
     <div className="register-container">
-      <div className="content">
-        <section>
-<<<<<<< HEAD
-          <img src={logoImg} alt="Be The Hero" />
-          <h1>CadastroA</h1>
-          <p>
-            SFSFSFFONG1111
-=======
-          <img src={logoUm} alt="AluGAMES" />
-          <h1>Cadastro</h1>
-          <p>
-            texto
->>>>>>> e291b02fec8401955084b7baee1400d1c0c70dbf
-          </p>
-
-          <Link to="/" className="back-link">
-            <FiArrowLeft size={16} color="#e02041" />
-            <p>voltar</p> 
-          </Link>
-        </section>
-
+      <div className="flex">
+        <img src={logoUm} alt="Imagem de logo"s />
+        <button className="botao-ajuda">AJUDA</button>
+      </div>
         <form onSubmit={handleRegister}>
-          <input
-            placeholder="Nome"
-            value={name}
-            onChange={e => setName(e.target.value)}
-          />
-          <input
-            type="email"
-            placeholder="E-mail"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-          />
-          <input
-            placeholder="WhatsApp"
-            value={whatsapp}
-            onChange={e => setWhatsapp(e.target.value)}
-          />
+          <div className="logo-center">
+            <img  src={logoCenter} alt="logo" height="25"/>
+          </div>
+          <div className="input-top">
+            <input
+              placeholder="Nome"
+              value={name}
+              onChange={e => setName(e.target.value)}
+            />
+            <input
+              type="email"
+              placeholder="E-mail"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
+            <input
+              placeholder="WhatsApp"
+              value={whatsapp}
+              onChange={e => setWhatsapp(e.target.value)}
+            />
+          </div>
+          
           <div className="input-group">
             <input
+              className="input-left"
               placeholder="Cidade"
               value={city}
               onChange={e => setCity(e.target.value)}
             />
             <input
+              className="input-right"
               placeholder="UF"
               style={{ width: 80 }}
               value={uf}
               onChange={e => setUf(e.target.value)}
             />
           </div>
-
+          <div className="contract">
+            <input type="checkbox" id="scales" name="scales" />
+              <p>Declaro ter lido e aceito o</p> <Link to="">Termo de compromisso </Link> 
+          </div>
           <button className="button" type="submit">
-            <p>Cadastrar</p>
+            <strong>CADASTRAR</strong>
+            <img src="https://img.icons8.com/material-rounded/24/000000/forward.png"/>
           </button>
+          <div className="aviso">
+            <p>Você receberá um ID referente ao seu login, NÃO O PERCA.</p>
+          </div>
         </form>
-      </div>
     </div>
   );
 }

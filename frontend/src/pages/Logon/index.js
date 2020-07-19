@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";
 
-<<<<<<< HEAD
-import heroesImg from "../../assets/Grupo 33.png";
-=======
 import heroesImg from "../../assets/heroes.png";
 import logoUm from "../../assets/logo-um.png"
 import logoCenter from "../../assets/logo-center.png"
->>>>>>> e291b02fec8401955084b7baee1400d1c0c70dbf
 import logoImg from "../../assets/logo.svg";
 import api from "../../services/api";
 
@@ -35,30 +31,6 @@ export default function Logon() {
     }
   }
   return (
-<<<<<<< HEAD
-    <div className="logon-container">
-      <section className="form">
-        <img src={logoImg} alt="Be The Hero" />
-
-        <form onSubmit={handleLogin}>
-          <h1> Faça seu logon </h1>
-
-          <input
-            placeholder="Sua ID"
-            value={id}
-            onChange={e => setId(e.target.value)}
-          />
-          <button className="button" type="submit">
-            Entrar aqui
-          </button>
-          <Link to="/register" className="back-link">
-            <FiLogIn size={16} color="#e02041" />
-            Não tenho cadastro
-          </Link>
-        </form>
-      </section>
-      <img src={heroesImg} alt="Heroes" className="fundo"/>
-=======
     <div className="App">
       <div className="flex">
         <img src={logoUm} alt="Imagem de logo" height="55" />
@@ -66,26 +38,28 @@ export default function Logon() {
       </div>
       <div className="logon-container">
         <section className="form">
-        <img className="logo-center" src={logoCenter} alt="logo" height="25" />
-
+          <div className="logo-center">
+            <img  src={logoCenter} alt="logo" height="25"/>
+          </div>
           <form onSubmit={handleLogin}>
 
             <input
-              placeholder="Sua ID"
+              placeholder="Digite seu ID"
               value={id}
               onChange={e => setId(e.target.value)} className="enter-text"
             />
             <button className="ButtonLogin" type="submit">
-              Entrar
+              <strong>ENTRAR </strong>
             </button>
-            <Link to="/register" className="back-link">
-              <FiLogIn size={16} color="#e02041" />
-              Não tenho cadastro
-            </Link>
           </form>
+          <div className="back">
+            <Link to="/register">
+                Não tenho cadastro
+            </Link>
+          </div>
+          
         </section>
       </div>
->>>>>>> e291b02fec8401955084b7baee1400d1c0c70dbf
     </div>
   );
 }

@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import logoImg from "../../assets/logo-um.png";
+import jogoImg from "../../assets/xadrez.jpg";
+import socialIco from "../../assets/whatsapp.png"
 import { Link, useHistory } from "react-router-dom";
 import { FiPower, FiTrash2 } from "react-icons/fi";
 import api from "../../services/api";
 import "./styles.css";
+//43b30896
 
 export default function Profile() {
   const [incidents, setIncidents] = useState([]);
-
+  const [xincidents, setXincidents] = useState([]);
   const ongName = localStorage.getItem("ongName");
   const ongId = localStorage.getItem("ongId");
 
@@ -22,6 +25,16 @@ export default function Profile() {
         setIncidents(response.data);
       });
   }, [ongId]);
+
+
+  useEffect(() => {
+    api.get("incidents", {
+      headers: { Authorization: ongId }
+    })
+      .then(response => {
+        setXincidents(response.data);
+      });
+  }, []);
 
   async function handleDeleteIncident(id) {
     try {
@@ -45,50 +58,68 @@ export default function Profile() {
     <div className="profile-container">
       <header>
         <img src={logoImg} alt="AluGAMES" />
-
+        <p>Bem vindo(a), !</p>
         <Link to="/incidents/new" className="register">
           Cadastrar novo jogo
         </Link>
 
-        <button type="button" onClick={handleLogout}>
-          <FiPower size={18} color="#e02041" />
-        </button>
+
       </header>
       <div className="scroll-horizontal">
-        <button className="back" >
-          <img className="exit-menu" src="https://img.icons8.com/metro/26/000000/back.png"/>
-        </button>
+        <p className="title-jogos">SEUS JOGOS</p>
         <ul>
           {incidents.map(incident => (
             <li key={incident.id}>
               <div className="img-jogo">
-                
+                <img src={jogoImg} alt="AluGAMES" />
               </div>
-              
-              <strong>NOME:</strong>
-              <p>{incident.title}</p>
-
-              <strong>DESCRIÇÃO:</strong>
-              <p>{incident.description}</p>
-
-              <strong>VALOR:</strong>
-              <p>
-                {Intl.NumberFormat("pt-br", {
-                  style: "currency",
-                  currency: "BRL"
-                }).format(incident.value)}
-              </p>
-
-              <button
-                type="button"
-                onClick={() => handleDeleteIncident(incident.id)}
-              >
+              <div className="info-esq">
+                <p>{incident.title}</p>
+                <p>{ongName}</p>
+                <p>{incident.description}</p>
+              </div>
+              <button className="trash" type="button" onClick={() => handleDeleteIncident(incident.id)}>
                 <FiTrash2 size={20} color="#a8a8b3" />
               </button>
             </li>
           ))}
         </ul>
+        <p className="title-jogos"> JOGOS DISPONÍNEIS PARA EMPRÉSTIMO</p>
+        <ul>
+          {xincidents.map(incidentx => (
+            <li key={incidentx.id}>
+              <div className="img-jogo">
+                <img src={jogoImg} alt="AluGAMES" />
+              </div>
+              <div className="info-esq">
+                <strong></strong>
+                <p>{incidentx.title}</p>
+                <p>{incidentx.description}</p>
+              </div>
+              <div className="info-meio">
+                <div>
+                  <strong>USER:</strong>
+                  <p>{incidentx.name}</p>
+                </div>
+                {console.log(incidentx)}
+                <p>Faixa Etária</p>
+                <p>
+                  {incidentx.value} Anos
+                </p>
+              </div>
+              <div className="info-dir">
+                <a href={window.open(`https://api.whatsapp.com/send?phone=${incidentx.whatsapp}`)}>
+                  <button > <img src={socialIco} /> quero esse</button>
+                </a>
+
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
+      <button type="button" onClick={handleLogout} className="exit-page">
+        <img src="https://img.icons8.com/android/24/000000/logout-rounded-left.png" /> <p>SAIR</p>
+      </button>
     </div>
   );
 }

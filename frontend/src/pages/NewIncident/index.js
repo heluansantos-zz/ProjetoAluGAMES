@@ -103,20 +103,11 @@ export default function NewIncident() {
               onChange={e => setDescription(e.target.value)}
             />
           </div>
-          <div className="img-input">
-            <div className="img-game">
-              <p>adicione uma imagem</p>
-              <div className="add-image">
-                <img src="https://img.icons8.com/android/24/000000/add-image.png"/> 
-              </div>
-            </div>
-            <div className="end-register">
-              <button type="submit">
-                <p>CONCLUÍDO</p>
-                <img src="https://img.icons8.com/android/24/000000/play.png"/>
-              </button>
-            </div>
-            
+          <div className="end-register">
+            <button type="submit">
+              <p>CONCLUÍDO</p>
+              <img src="https://img.icons8.com/android/24/000000/play.png"/>
+            </button>
           </div>
         </form>
       </div>

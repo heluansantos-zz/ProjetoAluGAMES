@@ -70,9 +70,9 @@ body{
 .scroll-horizontal {
   background: #f3f3f3;
   width: 100%;
-  min-height: 400px;
+  min-height: 600px;
   box-shadow: 3px 3px 10px rgb(173, 173, 173);
-  padding: 20px 0 0 20px;
+  padding: 20px 5px 5px 20px;
   margin-top: 50px;
 }
 .title-jogos{

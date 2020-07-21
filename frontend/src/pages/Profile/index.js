@@ -3,10 +3,11 @@ import logoImg from "../../assets/logo-um.png";
 import jogoImg from "../../assets/xadrez.jpg";
 import socialIco from "../../assets/whatsapp.png"
 import { Link, useHistory } from "react-router-dom";
-import { FiPower, FiTrash2 } from "react-icons/fi";
+import { FiTrash2 } from "react-icons/fi";
 import api from "../../services/api";
 import "./styles.css";
 //43b30896
+//ed07d990
 
 export default function Profile() {
   const [incidents, setIncidents] = useState([]);
@@ -58,7 +59,11 @@ export default function Profile() {
     <div className="profile-container">
       <header>
         <img src={logoImg} alt="AluGAMES" />
-        <p>Bem vindo(a), !</p>
+        <p>Bem vindo(a) ,
+           <font size={5}>
+            {ongName}!
+          </font>
+        </p>
         <Link to="/incidents/new" className="register">
           Cadastrar novo jogo
         </Link>
@@ -84,7 +89,7 @@ export default function Profile() {
             </li>
           ))}
         </ul>
-        <p className="title-jogos"> JOGOS DISPONÍNEIS PARA EMPRÉSTIMO</p>
+        <p className="title-jogos"> JOGOS DISPONÍNEIS PARA EMPRÉSTIMO </p>
         <ul>
           {xincidents.map(incidentx => (
             <li key={incidentx.id}>
@@ -96,22 +101,11 @@ export default function Profile() {
                 <p>{incidentx.title}</p>
                 <p>{incidentx.description}</p>
               </div>
-              <div className="info-meio">
-                <div>
-                  <strong>USER:</strong>
-                  <p>{incidentx.name}</p>
-                </div>
-                {console.log(incidentx)}
-                <p>Faixa Etária</p>
-                <p>
-                  {incidentx.value} Anos
-                </p>
-              </div>
+              
               <div className="info-dir">
-                <a href={window.open(`https://api.whatsapp.com/send?phone=${incidentx.whatsapp}`)}>
+                <a href={`https://api.whatsapp.com/send?phone=${encodeURIComponent(xincidents.whatsapp)}&text=${encodeURIComponent(`Estou interessado em pegar emprestado com você o jogo de ${incidentx.title}, pode ser ? `)}`} target="_blank">
                   <button > <img src={socialIco} /> quero esse</button>
                 </a>
-
               </div>
             </li>
           ))}

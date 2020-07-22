@@ -93,7 +93,7 @@ export default function Register() {
         </div>
         <div className="contract">
           <input type="checkbox" id="chkCar" name="scales" />
-          <p>Declaro ter lido e aceito o</p> <Link to="">Termo de compromisso </Link>
+          <p>Declaro ter lido e aceito o</p> <Link to="/aboutuser">Termo de compromisso </Link>
         </div>
         <button className="button" type="submit">
           <strong>CADASTRAR</strong>

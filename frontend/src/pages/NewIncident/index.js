@@ -70,7 +70,7 @@ export default function NewIncident() {
             </p>
           </div>
           <div >
-            <Link to="/" className="term-link">
+            <Link to="/aboutgamer" className="term-link">
               <div className="left">Termo de compromisso.</div>
               <div className="right">
                 <img src="https://img.icons8.com/android/24/000000/left.png"/>

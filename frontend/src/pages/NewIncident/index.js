@@ -63,7 +63,7 @@ export default function NewIncident() {
           <div className="term">
             <p>
               Antes de cadastrar um jogo, é necessário
-              que tenha lido o <a href="google.com">Termo de compromisso. </a>
+              que tenha lido o Termo de compromisso.
               Sendo assim, você está ciente que é
               totalmente responsável pelo cadastro e 
               por quaisquer ocasiões futuras.

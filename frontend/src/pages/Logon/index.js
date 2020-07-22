@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";
 
-import heroesImg from "../../assets/heroes.png";
 import logoUm from "../../assets/logo-um.png"
 import logoCenter from "../../assets/logo-center.png"
-import logoImg from "../../assets/logo.svg";
 import api from "../../services/api";
 
 import "./styles.css";
@@ -34,7 +32,6 @@ export default function Logon() {
     <div className="App">
       <div className="flex">
         <img src={logoUm} alt="Imagem de logo" height="55" />
-        <button className="botao-ajuda">AJUDA</button>
       </div>
       <div className="logon-container">
         <section className="form">
@@ -52,7 +49,7 @@ export default function Logon() {
               <strong>ENTRAR </strong>
             </button>
           </form>
-          <div className="back">
+          <div className="voltar">
             <Link to="/register">
                 Não tenho cadastro
             </Link>

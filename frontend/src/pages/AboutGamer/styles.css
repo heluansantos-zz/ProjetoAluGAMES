@@ -8,3 +8,55 @@
   .return img{
     height: 10px;
   }
+
+  *{
+    margin: 0px;
+    padding: 0px;
+}
+
+.contrato{
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 900px;
+}
+
+
+.contrato h3{
+  font-size: 30px;
+    text-align: center;
+    color: #C51D98;
+    text-shadow: 0px 1px 20px rgb(179, 179, 179);
+}
+.contrato h6{
+    text-align: justify;
+}
+
+.contrato h5{
+  text-align: left;
+}
+.contrato p{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.contrato span{
+    font-weight: bolder;
+}
+
+.rodape{
+    margin-top: 200px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px;
+    background: rgb(0, 0, 0);
+    position: relative;
+}
+
+.rodape strong{
+    color: rgb(139, 139, 139);
+    font-weight: initial;
+    font-size: 12px;
+}

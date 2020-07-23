@@ -6,7 +6,6 @@
   justify-content: center;
 }
 header{
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,9 +15,10 @@ header{
 .user{
   display: flex;
   align-items: center;
-  width: 600px;
+  width: 900px;
 }
 .user h2{
+  font-size: 25px;
   color: #c51d98;
   align-items: center;
   float: right;
@@ -59,16 +59,16 @@ header div p{
 .symbol img{
   height: 30px;
   margin-top: 115px;
-  margin-left: 370px;
+  margin-left: 365px;
   filter: invert(100%) brightness(0.5) sepia(1) saturate(5) hue-rotate(320deg);
 }
 .term{
-  width: 399px;
+  width: 410px;
 }
 .term p{
   font-weight: bolder;
   font: raleway;
-  font-size: 23px;
+  font-size: 20px;
 }
 .term a{
   color: #c51d98;
@@ -101,6 +101,7 @@ header div p{
 }
 .return img{
   height: 10px;
+  filter: invert(100%) brightness(0.5) sepia(1) saturate(5) hue-rotate(290deg);
 }
 .new-incident-container .content section h1 {
   margin: 64px 0 32px;
@@ -137,7 +138,7 @@ header div p{
   margin-left: 10px;
 }
 .name-game input{
-  margin-left: 30px;
+  margin-left: 20px;
   margin-right: 35px;
   width: 290px;
   border: none;

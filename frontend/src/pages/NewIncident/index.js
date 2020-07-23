@@ -63,7 +63,7 @@ export default function NewIncident() {
           <div className="term">
             <p>
               Antes de cadastrar um jogo, é necessário
-              que tenha lido o Termo de compromisso.
+              que tenha lido o <u>Termo de compromisso. </u>
               Sendo assim, você está ciente que é
               totalmente responsável pelo cadastro e 
               por quaisquer ocasiões futuras.

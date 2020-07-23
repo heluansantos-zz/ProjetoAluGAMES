@@ -129,3 +129,12 @@
   color: rgb(44, 44, 44);
   font-size: 12px;
 }
+
+#btn-cad:hover{
+  background-clip: text;
+  color: transparent;
+  border: 1px solid #c51d98;
+  transform: translateY(-3px);
+  box-shadow: 1px 1px 10px rgb(189, 189, 189);
+  transition: 0.4s;
+}

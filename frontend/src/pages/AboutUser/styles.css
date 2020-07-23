@@ -73,3 +73,7 @@ li{
     font-size: 12px;
 
 }
+
+.master{
+  overflow-y: hidden;
+}

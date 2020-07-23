@@ -51,7 +51,7 @@ export default function Register() {
     <div className="register-container">
       <div className="flex">
         <img src={logoUm} alt="Imagem de logo" s />
-        <button className="botao-ajuda">AJUDA</button>
+        
       </div>
       <form onSubmit={handleRegister}>
         <div className="logo-center">
@@ -93,9 +93,9 @@ export default function Register() {
         </div>
         <div className="contract">
           <input type="checkbox" id="chkCar" name="scales" />
-          <p>Declaro ter lido e aceito o</p> <Link to="/aboutuser">Termo de compromisso </Link>
+          <p>Declaro ter lido e aceito o</p> <Link to="/aboutuser" target="_blank">Termo de compromisso </Link>
         </div>
-        <button className="button" type="submit">
+        <button className="button" id="btn-cad" type="submit">
           <strong>CADASTRAR</strong>
           <img src="https://img.icons8.com/material-rounded/24/000000/forward.png" />
         </button>

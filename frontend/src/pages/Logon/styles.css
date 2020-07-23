@@ -92,8 +92,13 @@ input {
 .voltar{
   margin-top: 70px;
   padding-right: 170px;
-  font-size: 15px;
+  font-size: 13px;
   text-decoration: none;
   transition: opacity 0.2s;
   color: #ffffff;
+  transition: 0.2s;
+}
+
+.voltar:hover{
+  transform: scale(1.02);
 }

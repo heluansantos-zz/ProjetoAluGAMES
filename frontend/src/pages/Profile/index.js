@@ -71,7 +71,7 @@ export default function Profile() {
           
         </div>
         
-        <Link to="/incidents/new" className="register">
+        <Link to="/incidents/new" className="register" id="btn-cad"> 
           Cadastrar novo jogo
         </Link>
         <div>
@@ -109,7 +109,9 @@ export default function Profile() {
           {xincidents.map(incidentx => (
             <li key={incidentx.id}>
               
+              <p className="user-name">{incidentx.name}</p>
               <div className="info-esq2">
+                
                 <p className="nome">{incidentx.title}</p>
                 <p className="descricao">{incidentx.description}</p>
               </div>
@@ -117,7 +119,7 @@ export default function Profile() {
                 <img src={jogoImg} alt="AluGAMES" />
               </div>
               <div className="info-dir">
-                <a href={`https://api.whatsapp.com/send?phone=${encodeURIComponent(xincidents.whatsapp)}&text=${encodeURIComponent(`Estou interessado em pegar emprestado com você o jogo de ${incidentx.title}, pode ser ? `)}`} target="_blank">
+                <a href={`https://api.whatsapp.com/send?phone=${encodeURIComponent(incidentx.name)}&text=${encodeURIComponent(`Estou interessado em pegar emprestado com você o jogo de ${incidentx.title}, pode ser ? `)}`} target="_blank">
                   <button >  quero esse <img src={socialIco} /></button>
                 </a>
               </div>

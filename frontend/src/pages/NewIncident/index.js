@@ -69,8 +69,8 @@ export default function NewIncident() {
               por quaisquer ocasiões futuras.
             </p>
           </div>
-          <div >
-            <Link to="/aboutgamer" className="term-link">
+          <div className="div-termo"  id="termo-compromisso">
+            <Link to="/aboutgamer" className="term-link" target="_blank">
               <div className="left">Termo de compromisso.</div>
               <div className="right">
                 <img src="https://img.icons8.com/android/24/000000/left.png"/>
@@ -104,7 +104,7 @@ export default function NewIncident() {
             />
           </div>
           <div className="end-register">
-            <button type="submit">
+          <button type="submit" id="btn-cad">
               <p>CONCLUÍDO</p>
               <img src="https://img.icons8.com/android/24/000000/play.png"/>
             </button>

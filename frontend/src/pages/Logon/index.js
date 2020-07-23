@@ -49,9 +49,9 @@ export default function Logon() {
               <strong>ENTRAR </strong>
             </button>
           </form>
-          <div className="voltar">
+          <div className="voltar" >
             <Link to="/register">
-                Não tenho cadastro
+                <a>Não tenho cadastro</a>
             </Link>
           </div>
           

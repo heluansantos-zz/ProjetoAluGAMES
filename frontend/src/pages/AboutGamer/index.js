@@ -3,12 +3,14 @@ import {Link, useHistory } from "react-router-dom";
 import "./styles.css";
 import logo from "../../assets/logo-center.png"
 import logoUm from "../../assets/logo-dois.png"
+import fundo from "../../assets/fundo.png"
 export default function AboutGamer() {
     const history = useHistory();
     return(
         <div className="master">
             <div className="container">
                 <header>
+                    
                     <img src={logo} height="30"/>
                     <img src={logoUm} height="35"/>
                 </header>

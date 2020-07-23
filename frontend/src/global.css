@@ -8,9 +8,11 @@
 }
 
 body {
-  font: 400 14px releway;
+  font: 400 14px raleway;
   background: #fff;
   -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 input,
@@ -25,4 +27,17 @@ button {
 
 .back-link:hover {
   opacity: 0.8;
+}
+
+a{
+  font-size: 13px;
+  text-decoration: none;
+  color: #c51d98;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+a:hover{
+  transform: scale(1.02);
+  text-decoration: underline;
 }

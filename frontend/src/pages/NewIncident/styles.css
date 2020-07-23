@@ -183,3 +183,8 @@ header div p{
   margin-top: 10px;
   margin-left:52px;
 }
+
+#termo-compromisso:hover{
+  text-decoration: underline;
+  
+}
